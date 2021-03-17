@@ -1,0 +1,118 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	vertical-align:middle;
+}
+body{font-size:14px; font-family:arial,sans-serif;background:#CECEC6;}
+h1{text-align:center;padding:10px; font-size:24px;text-transform:uppercase;}
+
+.calendario{
+	width:480px;
+	height:400px;
+	background:#fffdf4;
+	margin:80px auto;
+	position:relative;	
+    border: solid 1px #babaab;
+	
+	transform: skewX(-4deg); /*Aqui ele vai dar uma distorcida no elemento no sentido horizontal(pode ate deixa pra colocar este por último depois de tudo pronto)*/
+}
+.calendario h2{
+	display:block;
+	padding:15px;
+	text-align:center;
+	color:#fff;
+	background:#AA1C4E;
+	text-transform:uppercase;
+}
+/*Aqui crio a primeira sombra de baixo (a menor e mais ecura)*/
+.calendario:before{
+	content: "";
+    border: solid 20px transparent; /*aqui a borda geral vai ter o tamanho de 20px e a cor transparente*/
+    border-left: solid 60px #9B9B8C; /*aqui altero o lado esquedo da borda dando um outro tamanho e dando agora uma cor*/
+    border-top: solid 6px #9B9B8C; /*aqui altero o topo da borda dando um outro tamanho e a mesma cor anterior*/
+    position: absolute;
+    right: -80px;
+    bottom: 0;
+}
+/*Aqui crio a segunda sombra de cima (a maior e mais clara)*/
+.calendario:after{
+	content: "";
+    border: solid 67px transparent; /*aqui a borda geral vai ter o tamanho de 67px e a cor transparente*/
+    border-left: solid 13px #BABAAB; /*aqui altero o lado esquedo da borda dando um outro tamanho e dando agora uma cor*/
+    border-bottom: solid 307px #BABAAB; /*aqui altero a parte de baixo da borda dando um outro tamanho e a mesma cor anterior*/
+    position: absolute;
+    right: -80px;
+    top: 0;
+    z-index: -1;
+}
+
+.calendario label{
+	width:145px;
+    border:solid 1px #CBCBC0;
+	float:left;
+	padding:20px 10px;
+}
+.calendario label small{
+	display:block;
+	text-align:right;
+	color:#AAAAAA;
+	text-transform:uppercase;
+}
+.calendario form{
+	display:block;
+	 padding:20px;
+}
+.calendario form input{
+	width:100%;
+	padding:5px 0;
+	border:0;
+	text-align:right;
+	font-size:45px;
+	background:#fffdf4;
+	color:#D82363
+}
+
+/*Aqui dou uma cor para o paceholder do input*/
+.calendario input::-webkit-input-placeholder{color:#D82363}
+
+.calendario .btn{
+	background:url(../img/img-btn.png) repeat center;
+	width:145px;
+	height:102px;
+    border:solid 1px #EA2239;
+	float:left;
+	font-size:18px;
+	text-align:center;
+	text-transform:uppercase;
+	padding:0;
+	color:#fff;
+	text-shadow:0 3px 3px #000; /*Aqui coloco uma somra ao texto do botão*/
+	cursor:pointer;
+}
+
+.resultado{
+	width:290px;
+    border:solid 1px #CBCBC0;
+	border-top:0;
+	float:left;
+	padding:20px 10px;
+	height:102px;
+}
+.resultado small{
+	display:block;
+	text-align:right;
+	color:#AAAAAA;
+	text-transform:uppercase;
+}
+.resultado p{
+	display:block;
+	text-align:right;
+	color:#D82363;
+	text-transform:uppercase;
+	font-size:45px;
+}
